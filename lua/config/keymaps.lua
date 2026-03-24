@@ -3,19 +3,19 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- Disable arrow keys
-keymap("n", "<Up>", "<Nop>", {
+keymap.set("n", "<Up>", "<Nop>", {
 	noremap = true,
 	silent = true,
 })
-keymap("n", "<Down>", "<Nop>", {
+keymap.set("n", "<Down>", "<Nop>", {
 	noremap = true,
 	silent = true,
 })
-keymap("n", "<Left>", "<Nop>", {
+keymap.set("n", "<Left>", "<Nop>", {
 	noremap = true,
 	silent = true,
 })
-keymap("n", "<Right>", "<Nop>", {
+keymap.set("n", "<Right>", "<Nop>", {
 	noremap = true,
 	silent = true,
 })
