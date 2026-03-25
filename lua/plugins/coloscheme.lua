@@ -1,10 +1,10 @@
 return {
 	{
-		"rose-pine/neovim",
+		"nyoom-engineering/oxocarbon.nvim",
 		priority = 1000,
-		name = "rose-pine",
+		name = "oxocarbon",
 		config = function()
-			vim.cmd([[colorscheme rose-pine]])
+			vim.cmd([[colorscheme oxocarbon]])
 		end,
 	},
 }
