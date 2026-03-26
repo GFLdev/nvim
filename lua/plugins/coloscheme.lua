@@ -1,10 +1,11 @@
 return {
 	{
-		"nyoom-engineering/oxocarbon.nvim",
+		"ayu-theme/ayu-vim",
 		priority = 1000,
-		name = "oxocarbon",
+		name = "ayu",
 		config = function()
-			vim.cmd([[colorscheme oxocarbon]])
+			vim.g.ayucolor = "dark"
+			vim.cmd("colorscheme ayu")
 		end,
 	},
 }
