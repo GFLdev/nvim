@@ -1,9 +1,9 @@
 return {
 	{
-		"Shatur/neovim-ayu",
+		"kdheepak/monochrome.nvim",
 		priority = 1000,
-		main = "ayu",
-		name = "ayu",
+		main = "monochrome",
+		name = "monochrome",
 		opts = {
 			mirage = false,
 			terminal = true,
@@ -12,11 +12,11 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "ayu",
+					theme = "monochrome",
 				},
 			})
 
-			vim.cmd("colorscheme ayu")
+			vim.cmd("colorscheme monochrome")
 		end,
 	},
 }
