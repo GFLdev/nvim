@@ -41,6 +41,7 @@ return {
 				"asm_lsp",
 				"ruby_lsp",
 				"harper_ls",
+				"terraformls",
 			},
 		})
 
@@ -55,6 +56,7 @@ return {
 				"eslint_d",
 				"asmfmt",
 				"rubocop",
+				"terraform",
 			},
 		})
 
