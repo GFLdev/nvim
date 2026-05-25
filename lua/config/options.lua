@@ -20,7 +20,7 @@ opt.cursorline = true
 opt.cursorcolumn = true
 
 -- Column guide
-opt.cc = "80"
+opt.cc = "120"
 
 -- Appearance
 opt.termguicolors = true

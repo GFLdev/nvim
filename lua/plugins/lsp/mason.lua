@@ -42,6 +42,7 @@ return {
 				"ruby_lsp",
 				"harper_ls",
 				"terraformls",
+				"ansiblels",
 			},
 		})
 
@@ -57,6 +58,7 @@ return {
 				"asmfmt",
 				"rubocop",
 				"terraform",
+				"ansible-lint",
 			},
 		})
 
