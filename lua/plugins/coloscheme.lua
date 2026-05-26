@@ -18,8 +18,8 @@ return {
 
 			vim.cmd("colorscheme monochrome")
 
-			vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#0a0a0a" })
+			vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#0f0f0f" })
 			vim.api.nvim_set_hl(0, "CursorLine", { bg = "#111111" })
 			vim.api.nvim_set_hl(0, "LineNr", { fg = "#404040" })
 			vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#aaaaaa" })
