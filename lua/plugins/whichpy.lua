@@ -8,5 +8,8 @@ return {
 			"folke/snacks.nvim",
 		},
 		opts = {},
+		config = function()
+			require("whichpy").setup({})
+		end,
 	},
 }
