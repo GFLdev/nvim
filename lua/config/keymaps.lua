@@ -20,6 +20,11 @@ keymap.set("n", "<Right>", "<Nop>", {
 	silent = true,
 })
 
+-- Venv selector
+keymap.set({ "n", "x" }, ",v", ":VenvSelect<cr>", {
+	desc = "Python venv selector",
+})
+
 -- Reload
 keymap.set("n", "<leader>r", ":so ~/.config/nvim/init.lua<CR>", {
 	desc = "Reload config",
