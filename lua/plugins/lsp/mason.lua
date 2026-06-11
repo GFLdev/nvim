@@ -43,6 +43,7 @@ return {
 				"harper_ls",
 				"terraformls",
 				"ansiblels",
+				"expert",
 			},
 		})
 

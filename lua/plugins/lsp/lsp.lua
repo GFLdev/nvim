@@ -67,6 +67,9 @@ return {
 
 		vim.env.PATH = vim.fn.expand("~/.rbenv/shims") .. ":" .. vim.env.PATH
 
+		-- Gleam
+		vim.lsp.enable("gleam")
+
 		mason_lspconfig.setup({
 			function(server_name)
 				vim.lsp.config(server_name, {
