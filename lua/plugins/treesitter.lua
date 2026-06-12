@@ -44,6 +44,10 @@ return {
 				"vue",
 				"ruby",
 				"dart",
+				"gleam",
+				"elixir",
+				"make",
+				"terraform",
 			},
 			incremental_selection = {
 				enable = true,
