@@ -70,6 +70,15 @@ return {
 		-- Gleam
 		vim.lsp.enable("gleam")
 
+		-- Elixir
+		vim.lsp.config("expert", {
+			cmd = { "expert", "--stdio" },
+			root_markers = { "mix.exs", ".git" },
+			filetypes = { "elixir", "eelixir", "heex" },
+		})
+
+		vim.lsp.enable("expert")
+
 		mason_lspconfig.setup({
 			function(server_name)
 				vim.lsp.config(server_name, {
