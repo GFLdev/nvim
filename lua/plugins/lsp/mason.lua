@@ -38,7 +38,7 @@ return {
 				"pyright",
 				"ts_ls",
 				"vue_ls",
-				"asm_lsp",
+				-- "asm_lsp",
 				"ruby_lsp",
 				"harper_ls",
 				"terraformls",
