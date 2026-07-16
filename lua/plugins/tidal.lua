@@ -1,5 +1,15 @@
+-- return {
+-- 	{
+-- 		"tidalcycles/vim-tidal",
+-- 	},
+-- }
 return {
 	{
-		"tidalcycles/vim-tidal",
+		"https://codeberg.org/MrReason/tidal.nvim",
+		opts = {},
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			opts = { ensure_installed = { "haskell" } },
+		},
 	},
 }
