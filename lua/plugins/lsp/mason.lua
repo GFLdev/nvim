@@ -45,6 +45,7 @@ return {
 				"ansiblels",
 				"expert",
 				"hls",
+				"groovyls",
 			},
 		})
 
@@ -63,6 +64,7 @@ return {
 				"ansible-lint",
 				"hlint",
 				"ormolu",
+				"npm-groovy-lint",
 			},
 		})
 
