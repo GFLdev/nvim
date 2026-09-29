@@ -49,6 +49,7 @@ return {
 				"elixir",
 				"make",
 				"terraform",
+				"proto",
 			},
 			incremental_selection = {
 				enable = true,

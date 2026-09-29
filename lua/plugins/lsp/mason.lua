@@ -46,6 +46,7 @@ return {
 				"expert",
 				"hls",
 				"groovyls",
+				"buf_ls",
 			},
 		})
 
