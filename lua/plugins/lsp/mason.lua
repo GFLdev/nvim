@@ -66,6 +66,7 @@ return {
 				"hlint",
 				"ormolu",
 				"npm-groovy-lint",
+				"sonarlint-language-server",
 			},
 		})
 
