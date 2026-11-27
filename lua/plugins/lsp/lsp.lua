@@ -7,7 +7,6 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
 
@@ -79,85 +78,67 @@ return {
 
 		vim.lsp.enable("expert")
 
-		mason_lspconfig.setup({
-			function(server_name)
-				vim.lsp.config(server_name, {
-					capabilities = capabilities,
-				})
-			end,
+		-- Installed with pkg, so mason-lspconfig's automatic_enable won't start them
+		vim.lsp.enable({ "lua_ls", "clangd", "texlab", "markdown_oxide", "harper_ls", "terraformls", "hls", "buf_ls" })
 
-			["ruby_lsp"] = function()
-				vim.lsp.config("ruby_lsp", {
-					capabilities = capabilities,
-					cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
-				})
-			end,
+		vim.lsp.config("*", { capabilities = capabilities })
 
-			["lua_ls"] = function()
-				vim.lsp.config("lua_ls", {
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
 					},
-				})
-			end,
+					completion = {
+						callSnippet = "Replace",
+					},
+				},
+			},
+		})
 
-			["vue_ls"] = function()
-				vim.lsp.config("vue_ls", {
-					capabilities = capabilities,
-					settings = {
-						vue = {
-							hybridMode = false,
-						},
-					},
-					filetypes = { "vue" },
-				})
-			end,
+		vim.lsp.config("vue_ls", {
+			settings = {
+				vue = {
+					hybridMode = false,
+				},
+			},
+			filetypes = { "vue" },
+		})
 
-			["ts_ls"] = function()
-				vim.lsp.config("ts_ls", {
-					init_options = {
-						plugins = {
-							{
-								name = "@vue/typescript-plugin",
-								location = vim.fn.stdpath("data")
-									.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
-								languages = { "vue" },
-							},
-						},
+		vim.lsp.config("ts_ls", {
+			init_options = {
+				plugins = {
+					{
+						name = "@vue/typescript-plugin",
+						location = vim.fn.stdpath("data")
+							.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+						languages = { "vue" },
 					},
-					filetypes = {
-						"javascript",
-						"typescript",
-						"vue",
+				},
+			},
+			filetypes = {
+				"javascript",
+				"typescript",
+				"vue",
+			},
+			settings = {
+				typescript = {
+					tsserver = {
+						useSyntaxServer = false,
 					},
-					settings = {
-						typescript = {
-							tsserver = {
-								useSyntaxServer = false,
-							},
-							inlayHints = {
-								includeInlayParameterNameHints = "all",
-								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-								includeInlayFunctionParameterTypeHints = true,
-								includeInlayVariableTypeHints = true,
-								includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-								includeInlayPropertyDeclarationTypeHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
-								includeInlayEnumMemberValueHints = true,
-							},
-						},
+					inlayHints = {
+						includeInlayParameterNameHints = "all",
+						includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+						includeInlayFunctionParameterTypeHints = true,
+						includeInlayVariableTypeHints = true,
+						includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+						includeInlayPropertyDeclarationTypeHints = true,
+						includeInlayFunctionLikeReturnTypeHints = true,
+						includeInlayEnumMemberValueHints = true,
 					},
-				})
-			end,
+				},
+			},
 		})
 	end,
 }
